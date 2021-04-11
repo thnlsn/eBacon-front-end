@@ -181,3 +181,24 @@ const characterCodes = [
   53,
   46,
 ];
+
+// Reduce
+const reduced = characterCodes.reduce((acc, curr) => {
+  // The first half of the || determines if the ASCII code is within the range of uppercase letters, while the second checks if it is a space
+  if ((curr > 64 && curr < 91) || curr === 32) {
+    // If it is one of those, check if the previous character is a space (32 is the code for space) and if it is, check if the current one is also a space. If so, return the accumulator without pushing the space to avoid consecutive spaces.
+    if (curr === 32 && acc[acc.length - 1] === 32) return acc;
+    // Otherwise it must be safe to push to the accumulator (meaning it is an uppercase letter or a non-consecutive space)
+    acc.push(curr); // Push to accumulator
+  }
+  return acc; // Return accumulator with newly pushed value
+}, []);
+
+console.log(reduced); // The ASCII codes in an array
+console.log(reduced.map((code) => String.fromCharCode(code))); // Codes converted to their corresponding characters
+console.log(
+  reduced
+    .map((code) => String.fromCharCode(code))
+    .join('')
+    .trim()
+); // EBACON IS A GREAT PLACE TO WORK (trimmed to take care of the space at the beginning)

@@ -1,3 +1,5 @@
+MY SOLUTION: https://9gir5.csb.app/
+
 ## Random Animal Fetcher
 
 #### _This test is meant to show how you can fetch simple data from an API and manipulate it within the scope of a React app._
