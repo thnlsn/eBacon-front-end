@@ -30,10 +30,3 @@ Within the app.js we support both class component and functional component. You 
 1. Filter the list base on userName
 2. Sort the list by timestamp
 3. Add headshots of the users to list items.
-
-# Explanation
-
-1. <q> semantic and to insert "" to the message so the user doesn't have to worry about that.
-2. Internationalization API to format date according to locale.
-3. I increment the quoteId based on the previous quoteId # rather than just incrementing based on the length of the quotes array (which seems like it'd be more straightforward) because this way there can never be a repeated quoteId, which is important for CRUD operations.
-4. I use findIndex() for finding the quote to delete over something like map() to avoid looping the entire array unneccesarily, since there will only ever be one element to be deleted, so stop once that is found.
