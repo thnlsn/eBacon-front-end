@@ -15,4 +15,3 @@
 ### Solution to BadMessage:
 
 - View the code in ./BadMessage/Codes.js
-- To view it live, follow instructions in ./BadMessage/Instructions.md
